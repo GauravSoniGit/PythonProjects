@@ -1,0 +1,1 @@
+{"hipblas": 18, "hipcub": 9, "hipsolver": 14, "rocalution": 29, "rocblas": 10, "rocfft": 10, "rocrand": 3, "rocsolver": 15, "rocsparse": 14, "rocthrust": 8}

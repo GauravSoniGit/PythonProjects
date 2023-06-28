@@ -1,0 +1,1055 @@
+---
+
+Folder path : E:\GAURAV_SONI_WORK\Benchmarks
+Current_run : rocprim
+
+# commands
+
+Rocrand:
+    rocrand_generate: --engine all --dis all
+    rocrand_kernel: --engine all --dis all
+    rocrand_host_api: ''
+
+Rocalution:
+        rocalution: --iterative-solver gmres --preconditioner ILU --matrix laplacian --krylov-basis 30
+
+Hipblas:
+    hipblas_bench_gemm_ex_s: [
+            '-f gemm_ex -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB N 1'
+    ]
+    hipblas_bench_gemm_ex_d: [
+            '-f gemm_ex -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type d --transposeB N 1'
+    ]
+    hipblas_bench_gemm_ex_h: [
+            '-f gemm_ex -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB N 1'
+    ]
+    hipblas_gemm_customer: [
+        '--transposeA T -f gemm_ex --compute_type s -r bf16_r --alpha 1 --beta 0 --initialization rand_int -m 960 -n 1024 -k 1024 --lda 1088 --ldb 1088 --ldc 1088 --ldd 1088 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r bf16_r --alpha 1 --beta 0 --initialization rand_int -m 3840 -n 4096 -k 4096 --lda 4160 --ldb 4160 --ldc 4160 --ldd 4160 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r f16_r --alpha 1 --beta 0 --initialization rand_int -m 960 -n 1024 -k 1024 --lda 1088 --ldb 1088 --ldc 1088 --ldd 1088 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r f16_r --alpha 1 --beta 0 --initialization rand_int -m 3840 -n 4096 -k 4096 --lda 4160 --ldb 4160 --ldc 4160 --ldd 4160 -i 10 1'
+    ]
+    hipblas_dot_s: [
+        '-f dot -r s -n 1000 1',
+        '-f dot -r s -n 100001 1',
+        '-f dot -r s -n 10000002 1',
+
+    ]
+    hipblas_dot_d: [
+        '-f dot -r d -n 1000 1',
+        '-f dot -r d -n 100001  	1',
+        '-f dot -r d -n 10000002 1'
+    ]
+    hipblas_bench_gemm: [
+            '-f gemm -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1',
+            '-f gemm -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1',
+            '-f gemm -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1'
+
+    ]
+    hipblas_gemv_s: [
+        '-f gemv -r s -m 1000 -n 1000 --lda 1000 1',
+        '-f gemv -r s -m 10001 -n 10001 --lda 10002 1'
+    ]
+    hipblas_gemv_d: [
+        '-f gemv -r d -m 1000 -n 1000 --lda 1000 1',
+        '-f gemv -r d -m 10001 -n 10001 --lda 10002 1'
+    ]
+    hipblas_ger_s: [
+        '-f ger -r s -m 1000 -n 1000 --lda 1000 1',
+        '-f ger -r s -m 10001 -n 10001 --lda 10002 1'
+    ]
+    hipblas_ger_d: [
+        '-f ger -r d -m 1000 -n 1000 --lda 1000 1',
+        '-f ger -r d -m 10001 -n 10001 --lda 10002 1'
+    ]
+
+Rocblas:
+    rocblas_bench_gemm_ex_s: [
+            '-f gemm_ex -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB N 1'
+    ]
+    rocblas_bench_gemm_ex_d: [
+            '-f gemm_ex -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type d --transposeB N 1',
+            '-f gemm_ex -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type d --transposeB T 1',
+            '-f gemm_ex -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type d --transposeB N 1'
+    ]
+    rocblas_bench_gemm_ex_h: [
+            '-f gemm_ex -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047  --ldd 2047 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048  --ldd 2048 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095  --ldd 4095 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096  --ldd 4096 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503  --ldd 5503 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504  --ldd 5504 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760  --ldd 5760 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143  --ldd 6143 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144  --ldd 6144 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744  --ldd 7744 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191  --ldd 8191 --compute_type s --transposeB N 1',
+            '-f gemm_ex -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB T 1',
+            '-f gemm_ex -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192  --ldd 8192 --compute_type s --transposeB N 1'
+    ]
+    rocblas_gemm_customer: [
+        '--transposeA T -f gemm_ex --compute_type s -r bf16_r --alpha 1 --beta 0 --initialization rand_int -m 960 -n 1024 -k 1024 --lda 1088 --ldb 1088 --ldc 1088 --ldd 1088 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r bf16_r --alpha 1 --beta 0 --initialization rand_int -m 3840 -n 4096 -k 4096 --lda 4160 --ldb 4160 --ldc 4160 --ldd 4160 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r f16_r --alpha 1 --beta 0 --initialization rand_int -m 960 -n 1024 -k 1024 --lda 1088 --ldb 1088 --ldc 1088 --ldd 1088 -i 10 1',
+        '--transposeA T -f gemm_ex --compute_type s -r f16_r --alpha 1 --beta 0 --initialization rand_int -m 3840 -n 4096 -k 4096 --lda 4160 --ldb 4160 --ldc 4160 --ldd 4160 -i 10 1'
+    ]
+    rocblas_dot_s: [
+        '-f dot -r s -n 1000 1',
+        '-f dot -r s -n 100001 1',
+        '-f dot -r s -n 10000002 1',
+
+    ]
+    rocblas_dot_d: [
+        '-f dot -r d -n 1000 1',
+        '-f dot -r d -n 100001  	1',
+        '-f dot -r d -n 10000002 1'
+    ]
+    rocblas_bench_gemm: [
+            '-f gemm -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r s -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r s -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r s -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r s -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r s -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r s -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r s -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r s -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r s -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r s -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r s -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r s -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1',
+            '-f gemm -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r d -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r d -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r d -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r d -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r d -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r d -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r d -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r d -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r d -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r d -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r d -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r d -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1',
+            '-f gemm -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB T 1',
+            '-f gemm -r h -m 2047 -n 2047 -k 2047 --lda 2047 --ldb 2047 --ldc 2047 --transposeB N 1',
+            '-f gemm -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB T 1',
+            '-f gemm -r h -m 2048 -n 2048 -k 2048 --lda 2048 --ldb 2048 --ldc 2048 --transposeB N 1',
+            '-f gemm -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB T 1',
+            '-f gemm -r h -m 4095 -n 4095 -k 4095 --lda 4095 --ldb 4095 --ldc 4095 --transposeB N 1',
+            '-f gemm -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB T 1',
+            '-f gemm -r h -m 4096 -n 4096 -k 4096 --lda 4096 --ldb 4096 --ldc 4096 --transposeB N 1',
+            '-f gemm -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB T 1',
+            '-f gemm -r h -m 5503 -n 5503 -k 5503 --lda 5503 --ldb 5503 --ldc 5503 --transposeB N 1',
+            '-f gemm -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB T 1',
+            '-f gemm -r h -m 5504 -n 5504 -k 5504 --lda 5504 --ldb 5504 --ldc 5504 --transposeB N 1',
+            '-f gemm -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB T 1',
+            '-f gemm -r h -m 5760 -n 5760 -k 5760 --lda 5760 --ldb 5760 --ldc 5760 --transposeB N 1',
+            '-f gemm -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB T 1',
+            '-f gemm -r h -m 6143 -n 6143 -k 6143 --lda 6143 --ldb 6143 --ldc 6143 --transposeB N 1',
+            '-f gemm -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB T 1',
+            '-f gemm -r h -m 6144 -n 6144 -k 6144 --lda 6144 --ldb 6144 --ldc 6144 --transposeB N 1',
+            '-f gemm -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB T 1',
+            '-f gemm -r h -m 7744 -n 7744 -k 7744 --lda 7744 --ldb 7744 --ldc 7744 --transposeB N 1',
+            '-f gemm -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB T 1',
+            '-f gemm -r h -m 8191 -n 8191 -k 8191 --lda 8191 --ldb 8191 --ldc 8191 --transposeB N 1',
+            '-f gemm -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB T 1',
+            '-f gemm -r h -m 8192 -n 8192 -k 8192 --lda 8192 --ldb 8192 --ldc 8192 --transposeB N 1'
+
+    ]
+    rocblas_gemv_s: [
+        '-f gemv -r s -m 1000 -n 1000 --lda 1000 1',
+        '-f gemv -r s -m 10001 -n 10001 --lda 10002 1'
+    ]
+    rocblas_gemv_d: [
+        '-f gemv -r d -m 1000 -n 1000 --lda 1000 1',
+        '-f gemv -r d -m 10001 -n 10001 --lda 10002 1'
+    ]
+    rocblas_ger_s: [
+        '-f ger -r s -m 1000 -n 1000 --lda 1000 1',
+        '-f ger -r s -m 10001 -n 10001 --lda 10002 1'
+    ]
+    rocblas_ger_d: [
+        '-f ger -r d -m 1000 -n 1000 --lda 1000 1',
+        '-f ger -r d -m 10001 -n 10001 --lda 10002 1'
+    ]
+
+Hipsolver:
+    hipsolver_bench_getrf: [
+            '-r d -m 2048 -n 2048 --lda 2048 -f getrf -i 10 2',
+            '-r d -m 4096 -n 4096 --lda 4096 -f getrf -i 10 2',
+            '-r d -m 5504 -n 5504 --lda 5504 -f getrf -i 10 2',
+            '-r d -m 5760 -n 5760 --lda 5760 -f getrf -i 10 2',
+            '-r d -m 6144 -n 6144 --lda 6144 -f getrf -i 10 2',
+            '-r d -m 7744 -n 7744 --lda 7744 -f getrf -i 10 2',
+            '-r d -m 8192 -n 8192 --lda 8192 -f getrf -i 10 2',
+
+            '-r s -m 30 -n 30 --lda 30 -f getrf -i 10 2',
+            '-r s -m 2048 -n 2048 --lda 2048 -f getrf -i 10 2',
+            '-r s -m 4096 -n 4096 --lda 4096 -f getrf -i 10 2',
+            '-r s -m 5504 -n 5504 --lda 5504 -f getrf -i 10 2',
+            '-r s -m 5760 -n 5760 --lda 5760 -f getrf -i 10 2',
+            '-r s -m 5760 -n 5760 --lda 5760 -f getrf -i 10 2',
+            '-r s -m 7744 -n 7744 --lda 7744 -f getrf -i 10 2',
+            '-r s -m 8192 -n 8192 --lda 8192 -f getrf -i 10 2',
+
+            '-r c -m 30 -n 30 --lda 30 -f getrf -i 10 2',
+            '-r c -m 2048 -n 2048 --lda 2048 -f getrf -i 10 2',
+            '-r c -m 4096 -n 4096 --lda 4096 -f getrf -i 10 2',
+            '-r c -m 5504 -n 5504 --lda 5504 -f getrf -i 10 2',
+            '-r c -m 5760 -n 5760 --lda 5760 -f getrf -i 10 2',
+            '-r c -m 6144 -n 6144 --lda 6144 -f getrf -i 10 2',
+            '-r c -m 7744 -n 7744 --lda 7744 -f getrf -i 10 2',
+            '-r c -m 8192 -n 8192 --lda 8192 -f getrf -i 10 2',
+
+            '-r z -m 30 -n 30 --lda 30 -f getrf -i 10 2',
+            '-r z -m 2048 -n 2048 --lda 2048 -f getrf -i 10 2',
+            '-r z -m 4096 -n 4096 --lda 4096 -f getrf -i 10 2',
+            '-r z -m 5504 -n 5504 --lda 5504 -f getrf -i 10 2',
+            '-r z -m 5760 -n 5760 --lda 5760 -f getrf -i 10 2',
+            '-r z -m 6144 -n 6144 --lda 6144 -f getrf -i 10 2',
+            '-r z -m 7744 -n 7744 --lda 7744 -f getrf -i 10 2',
+            '-r z -m 8192 -n 8192 --lda 8192 -f getrf -i 10 2'
+    ]
+    hipsolver_bench_getrs: [
+            '-r d -n 30 --lda 30 -f getrs -i 10 1',
+            '-r d -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r d -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r d -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r d -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r d -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r d -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r d -n 8192 --lda 8192 -f getrs -i 10 1',
+
+            '-r s -n 30 --lda 30 -f getrs -i 10 1',
+            '-r s -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r s -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r s -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r s -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r s -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r s -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r s -n 8192 --lda 8192 -f getrs -i 10 1',
+
+            '-r c -n 30 --lda 30 -f getrs -i 10 1',
+            '-r c -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r c -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r c -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r c -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r c -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r c -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r c -n 8192 --lda 8192 -f getrs -i 10 1'
+    ]
+    hipsolver_bench_portf: [
+            '-r d -m 30 -n 30 --lda 30 -f potrf -i 10 2',
+            '-r d -m 2048 -n 2048 --lda 2048 -f potrf -i 10 2',
+            '-r d -m 4096 -n 4096 --lda 4096 -f potrf -i 10 2',
+            '-r d -m 5504 -n 5504 --lda 5504 -f potrf -i 10 2',
+            '-r d -m 5760 -n 5760 --lda 5760 -f potrf -i 10 2',
+            '-r d -m 6144 -n 6144 --lda 6144 -f potrf -i 10 2',
+            '-r d -m 7744 -n 7744 --lda 7744 -f potrf -i 10 2',
+            '-r d -m 8192 -n 8192 --lda 8192 -f potrf -i 10 2',
+
+
+            '-r s -m 30 -n 30 --lda 30 -f potrf -i 10 2',
+            '-r s -m 2048 -n 2048 --lda 2048 -f potrf -i 10 2',
+            '-r s -m 4096 -n 4096 --lda 4096 -f potrf -i 10 2',
+            '-r s -m 5504 -n 5504 --lda 5504 -f potrf -i 10 2',
+            '-r s -m 5760 -n 5760 --lda 5760 -f potrf -i 10 2',
+            '-r s -m 6144 -n 6144 --lda 6144 -f potrf -i 10 2',
+            '-r s -m 7744 -n 7744 --lda 7744 -f potrf -i 10 2',
+            '-r s -m 8192 -n 8192 --lda 8192 -f potrf -i 10 2',
+
+            '-r c -m 30 -n 30 --lda 30 -f potrf -i 10 2',
+            '-r c -m 2048 -n 2048 --lda 2048 -f potrf -i 10 2',
+            '-r c -m 4096 -n 4096 --lda 4096 -f potrf -i 10 2',
+            '-r c -m 5504 -n 5504 --lda 5504 -f potrf -i 10 2',
+            '-r c -m 5760 -n 5760 --lda 5760 -f potrf -i 10 2',
+            '-r c -m 6144 -n 6144 --lda 6144 -f potrf -i 10 2',
+            '-r c -m 7744 -n 7744 --lda 7744 -f potrf -i 10 2',
+            '-r c -m 8192 -n 8192 --lda 8192 -f potrf -i 10 2',
+
+            '-r z -m 30 -n 30 --lda 30 -f potrf -i 10 2',
+            '-r z -m 2048 -n 2048 --lda 2048 -f potrf -i 10 2',
+            '-r z -m 4096 -n 4096 --lda 4096 -f potrf -i 10 2',
+            '-r z -m 5504 -n 5504 --lda 5504 -f potrf -i 10 2',
+            '-r z -m 5760 -n 5760 --lda 5760 -f potrf -i 10 2',
+            '-r z -m 6144 -n 6144 --lda 6144 -f potrf -i 10 2',
+            '-r z -m 7744 -n 7744 --lda 7744 -f potrf -i 10 2',
+            '-r z -m 8192 -n 8192 --lda 8192 -f potrf -i 10 2'
+    ]
+    hipsolver_bench_portf_batched: [
+            '-r d -m 30 -n 30 --lda 30 -f potrf_batched -i 10 2',
+            '-r d -m 2048 -n 2048 --lda 2048 -f potrf_batched -i 10 2',
+            '-r d -m 4096 -n 4096 --lda 4096 -f potrf_batched -i 10 2',
+            '-r d -m 5504 -n 5504 --lda 5504 -f potrf_batched -i 10 2',
+            '-r d -m 5760 -n 5760 --lda 5760 -f potrf_batched -i 10 2',
+            '-r d -m 6144 -n 6144 --lda 6144 -f potrf_batched -i 10 2',
+            '-r d -m 7744 -n 7744 --lda 7744 -f potrf_batched -i 10 2',
+            '-r d -m 8192 -n 8192 --lda 8192 -f potrf_batched -i 10 2',
+
+            '-r s -m 30 -n 30 --lda 30 -f potrf_batched -i 10 2',
+            '-r s -m 2048 -n 2048 --lda 2048 -f potrf_batched -i 10 2',
+            '-r s -m 4096 -n 4096 --lda 4096 -f potrf_batched -i 10 2',
+            '-r s -m 5504 -n 5504 --lda 5504 -f potrf_batched -i 10 2',
+            '-r s -m 5760 -n 5760 --lda 5760 -f potrf_batched -i 10 2',
+            '-r s -m 6144 -n 6144 --lda 6144 -f potrf_batched -i 10 2',
+            '-r s -m 7744 -n 7744 --lda 7744 -f potrf_batched -i 10 2',
+            '-r s -m 8192 -n 8192 --lda 8192 -f potrf_batched -i 10 2',
+
+            '-r c -m 30 -n 30 --lda 30 -f potrf_batched -i 10 2',
+            '-r c -m 2048 -n 2048 --lda 2048 -f potrf_batched -i 10 2',
+            '-r c -m 4096 -n 4096 --lda 4096 -f potrf_batched -i 10 2',
+            '-r c -m 5504 -n 5504 --lda 5504 -f potrf_batched -i 10 2',
+            '-r c -m 5760 -n 5760 --lda 5760 -f potrf_batched -i 10 2',
+            '-r c -m 6144 -n 6144 --lda 6144 -f potrf_batched -i 10 2',
+            '-r c -m 7744 -n 7744 --lda 7744 -f potrf_batched -i 10 2',
+            '-r c -m 8192 -n 8192 --lda 8192 -f potrf_batched -i 10 2',
+
+            '-r z -m 30 -n 30 --lda 30 -f potrf_batched -i 10 2',
+            '-r z -m 2048 -n 2048 --lda 2048 -f potrf_batched -i 10 2',
+            '-r z -m 4096 -n 4096 --lda 4096 -f potrf_batched -i 10 2',
+            '-r z -m 5504 -n 5504 --lda 5504 -f potrf_batched -i 10 2',
+            '-r z -m 5760 -n 5760 --lda 5760 -f potrf_batched -i 10 2',
+            '-r z -m 6144 -n 6144 --lda 6144 -f potrf_batched -i 10 2',
+            '-r z -m 7744 -n 7744 --lda 7744 -f potrf_batched -i 10 2',
+            '-r z -m 8192 -n 8192 --lda 8192 -f potrf_batched -i 10 2'
+    ]
+
+Rocsolver:
+    rocsolver_bench_getrf: [
+            '-r d -m 2048 -n 2048 --lda 2048 -f getrf -i 10 ',
+            '-r d -m 4096 -n 4096 --lda 4096 -f getrf -i 10 ',
+            '-r d -m 5504 -n 5504 --lda 5504 -f getrf -i 10 ',
+            '-r d -m 5760 -n 5760 --lda 5760 -f getrf -i 10 ',
+            '-r d -m 6144 -n 6144 --lda 6144 -f getrf -i 10 ',
+            '-r d -m 7744 -n 7744 --lda 7744 -f getrf -i 10 ',
+            '-r d -m 8192 -n 8192 --lda 8192 -f getrf -i 10 ',
+
+            '-r s -m 30 -n 30 --lda 30 -f getrf -i 10 ',
+            '-r s -m 2048 -n 2048 --lda 2048 -f getrf -i 10 ',
+            '-r s -m 4096 -n 4096 --lda 4096 -f getrf -i 10 ',
+            '-r s -m 5504 -n 5504 --lda 5504 -f getrf -i 10 ',
+            '-r s -m 5760 -n 5760 --lda 5760 -f getrf -i 10 ',
+            '-r s -m 5760 -n 5760 --lda 5760 -f getrf -i 10 ',
+            '-r s -m 7744 -n 7744 --lda 7744 -f getrf -i 10 ',
+            '-r s -m 8192 -n 8192 --lda 8192 -f getrf -i 10 ',
+
+            '-r c -m 30 -n 30 --lda 30 -f getrf -i 10 ',
+            '-r c -m 2048 -n 2048 --lda 2048 -f getrf -i 10 ',
+            '-r c -m 4096 -n 4096 --lda 4096 -f getrf -i 10 ',
+            '-r c -m 5504 -n 5504 --lda 5504 -f getrf -i 10 ',
+            '-r c -m 5760 -n 5760 --lda 5760 -f getrf -i 10 ',
+            '-r c -m 6144 -n 6144 --lda 6144 -f getrf -i 10 ',
+            '-r c -m 7744 -n 7744 --lda 7744 -f getrf -i 10 ',
+            '-r c -m 8192 -n 8192 --lda 8192 -f getrf -i 10 ',
+
+            '-r z -m 30 -n 30 --lda 30 -f getrf -i 10 ',
+            '-r z -m 2048 -n 2048 --lda 2048 -f getrf -i 10 ',
+            '-r z -m 4096 -n 4096 --lda 4096 -f getrf -i 10 ',
+            '-r z -m 5504 -n 5504 --lda 5504 -f getrf -i 10 ',
+            '-r z -m 5760 -n 5760 --lda 5760 -f getrf -i 10 ',
+            '-r z -m 6144 -n 6144 --lda 6144 -f getrf -i 10 ',
+            '-r z -m 7744 -n 7744 --lda 7744 -f getrf -i 10 ',
+            '-r z -m 8192 -n 8192 --lda 8192 -f getrf -i 10 '
+    ]
+    rocsolver_bench_getrs: [
+            '-r d -n 30 --lda 30 -f getrs -i 10 1',
+            '-r d -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r d -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r d -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r d -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r d -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r d -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r d -n 8192 --lda 8192 -f getrs -i 10 1',
+
+            '-r s -n 30 --lda 30 -f getrs -i 10 1',
+            '-r s -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r s -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r s -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r s -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r s -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r s -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r s -n 8192 --lda 8192 -f getrs -i 10 1',
+
+            '-r c -n 30 --lda 30 -f getrs -i 10 1',
+            '-r c -n 2048 --lda 2048 -f getrs -i 10 1',
+            '-r c -n 4096 --lda 4096 -f getrs -i 10 1',
+            '-r c -n 5504 --lda 5504 -f getrs -i 10 1',
+            '-r c -n 5760 --lda 5760 -f getrs -i 10 1',
+            '-r c -n 6144 --lda 6144 -f getrs -i 10 1',
+            '-r c -n 7744 --lda 7744 -f getrs -i 10 1',
+            '-r c -n 8192 --lda 8192 -f getrs -i 10 1'
+    ]
+    rocsolver_bench_portf: [
+            '-r d -n 30 --lda 30 -f potrf -i 10 ',
+            '-r d -n 2048 --lda 2048 -f potrf -i 10 ',
+            '-r d -n 4096 --lda 4096 -f potrf -i 10 ',
+            '-r d -n 5504 --lda 5504 -f potrf -i 10 ',
+            '-r d -n 5760 --lda 5760 -f potrf -i 10 ',
+            '-r d -n 6144 --lda 6144 -f potrf -i 10 ',
+            '-r d -n 7744 --lda 7744 -f potrf -i 10 ',
+            '-r d -n 8192 --lda 8192 -f potrf -i 10 ',
+
+            '-r s -n 30 --lda 30 -f potrf -i 10 ',
+            '-r s -n 2048 --lda 2048 -f potrf -i 10 ',
+            '-r s -n 4096 --lda 4096 -f potrf -i 10 ',
+            '-r s -n 5504 --lda 5504 -f potrf -i 10 ',
+            '-r s -n 5760 --lda 5760 -f potrf -i 10 ',
+            '-r s -n 6144 --lda 6144 -f potrf -i 10 ',
+            '-r s -n 7744 --lda 7744 -f potrf -i 10 ',
+            '-r s -n 8192 --lda 8192 -f potrf -i 10 ',
+
+            '-r c -n 30 --lda 30 -f potrf -i 10 ',
+            '-r c -n 2048 --lda 2048 -f potrf -i 10 ',
+            '-r c -n 4096 --lda 4096 -f potrf -i 10 ',
+            '-r c -n 5504 --lda 5504 -f potrf -i 10 ',
+            '-r c -n 5760 --lda 5760 -f potrf -i 10 ',
+            '-r c -n 6144 --lda 6144 -f potrf -i 10 ',
+            '-r c -n 7744 --lda 7744 -f potrf -i 10 ',
+            '-r c -n 8192 --lda 8192 -f potrf -i 10 ',
+
+            '-r z -n 30 --lda 30 -f potrf -i 10 ',
+            '-r z -n 2048 --lda 2048 -f potrf -i 10 ',
+            '-r z -n 4096 --lda 4096 -f potrf -i 10 ',
+            '-r z -n 5504 --lda 5504 -f potrf -i 10 ',
+            '-r z -n 5760 --lda 5760 -f potrf -i 10 ',
+            '-r z -n 6144 --lda 6144 -f potrf -i 10 ',
+            '-r z -n 7744 --lda 7744 -f potrf -i 10 ',
+            '-r z -n 8192 --lda 8192 -f potrf -i 10 '
+    ]
+    rocsolver_bench_portf_batched: [
+            '-r d -n 30 --lda 30 -f potrf_batched -i 10 ',
+            '-r d -n 2048 --lda 2048 -f potrf_batched -i 10 ',
+            '-r d -n 4096 --lda 4096 -f potrf_batched -i 10 ',
+            '-r d -n 5504 --lda 5504 -f potrf_batched -i 10 ',
+            '-r d -n 5760 --lda 5760 -f potrf_batched -i 10 ',
+            '-r d -n 6144 --lda 6144 -f potrf_batched -i 10 ',
+            '-r d -n 7744 --lda 7744 -f potrf_batched -i 10 ',
+            '-r d -n 8192 --lda 8192 -f potrf_batched -i 10 ',
+
+            '-r s -n 30 --lda 30 -f potrf_batched -i 10 ',
+            '-r s -n 2048 --lda 2048 -f potrf_batched -i 10 ',
+            '-r s -n 4096 --lda 4096 -f potrf_batched -i 10 ',
+            '-r s -n 5504 --lda 5504 -f potrf_batched -i 10 ',
+            '-r s -n 5760 --lda 5760 -f potrf_batched -i 10 ',
+            '-r s -n 6144 --lda 6144 -f potrf_batched -i 10 ',
+            '-r s -n 7744 --lda 7744 -f potrf_batched -i 10 ',
+            '-r s -n 8192 --lda 8192 -f potrf_batched -i 10 ',
+
+            '-r c -n 30 --lda 30 -f potrf_batched -i 10 ',
+            '-r c -n 2048 --lda 2048 -f potrf_batched -i 10 ',
+            '-r c -n 4096 --lda 4096 -f potrf_batched -i 10 ',
+            '-r c -n 5504 --lda 5504 -f potrf_batched -i 10 ',
+            '-r c -n 5760 --lda 5760 -f potrf_batched -i 10 ',
+            '-r c -n 6144 --lda 6144 -f potrf_batched -i 10 ',
+            '-r c -n 7744 --lda 7744 -f potrf_batched -i 10 ',
+            '-r c -n 8192 --lda 8192 -f potrf_batched -i 10 ',
+
+            '-r z -n 30 --lda 30 -f potrf_batched -i 10 ',
+            '-r z -n 2048 --lda 2048 -f potrf_batched -i 10 ',
+            '-r z -n 4096 --lda 4096 -f potrf_batched -i 10 ',
+            '-r z -n 5504 --lda 5504 -f potrf_batched -i 10 ',
+            '-r z -n 5760 --lda 5760 -f potrf_batched -i 10 ',
+            '-r z -n 6144 --lda 6144 -f potrf_batched -i 10 ',
+            '-r z -n 7744 --lda 7744 -f potrf_batched -i 10 ',
+            '-r z -n 8192 --lda 8192 -f potrf_batched -i 10 '
+    ]
+
+Rocsparse:
+    rocsparse_bench_bsrmv: [
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron3.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron4.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mc2depi.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mplate.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos1.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos2.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos3.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos4.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos5.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos6.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos7.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/qc2534.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/rma10.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/scircuit.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/shipsec1.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/sme3Dc.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/webbase-1M.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/ASIC_320k.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/bibd_22_8.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/bmwcra_1.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chebyshev4.csr',
+            '-f bsrmv --precision d --device 0 --blockdim 2 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_coomv: [
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron3.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron4.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mc2depi.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/mplate.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos1.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos2.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos3.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos4.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos5.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos6.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/nos7.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/qc2534.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/rma10.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/scircuit.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/shipsec1.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/sme3Dc.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/webbase-1M.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/ASIC_320k.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/bibd_22_8.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/bmwcra_1.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chebyshev4.csr',
+            '-f coomv --spmv_alg 5 --precision d --device 0 --alpha 1 --beta 0 --iters 1000 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrgeam: [
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrgeam  --precision d --device 0 --alpha 1  --iters 200 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrgemm: [
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrgemm  --precision d --device 0 --sizen 2 --alpha 1  --iters 200 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrmm: [
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrmmt: [
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrmm  --precision d --device 0 --sizen 2 --order 0 --transposeB T --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrsv: [
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron3.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron4.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mc2depi.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mplate.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos1.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos2.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos3.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos4.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos5.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos6.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos7.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/qc2534.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/rma10.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/scircuit.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/shipsec1.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrsv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dcsrmv: [
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrmv  --precision d --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_dellmv: [
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron3.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron4.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mac_econ_fwd500.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mc2depi.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/mplate.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos1.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos2.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos3.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos4.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos5.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos6.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/nos7.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/qc2534.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/rma10.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/scircuit.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/shipsec1.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/sme3Dc.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/webbase-1M.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/amazon0312.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/ASIC_320k.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/bibd_22_8.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/bmwcra_1.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chebyshev4.csr',
+            ' -f ellmv  --precision d --device 0  --alpha 1 --beta 0  --iters 1000 --rocalution ../matrices/Chevron2.csr']
+    rocsparse_bench_scsrmv: [
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron3.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron4.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mac_econ_fwd500.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mc2depi.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/mplate.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos1.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos2.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos3.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos4.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos5.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos6.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/nos7.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/qc2534.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/rma10.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/scircuit.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/shipsec1.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/sme3Dc.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/webbase-1M.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/amazon0312.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/ASIC_320k.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bibd_22_8.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/bmwcra_1.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chebyshev4.csr',
+            '-f csrmv  --precision s --device 0  --alpha 1 --beta 0  --iters 200 --rocalution ../matrices/Chevron2.csr']
+
+Rocfft:
+        rocfft: [
+        '--length 16777216 -b 10 -N 20 ',
+        '--length 14348907 -b 10 -N 20 ',
+        '--length 9765625 -b 10 -N 20  ',
+        '--length 4096 4096 -b 10 -N 20  ',
+        '--length 6561 6561 -b 10 -N 20  ',
+        '--length 3125 3125 -b 10 -N 20  ',
+        '--length 256 256 256 -b 10 -N 20  ',
+        '--length 243 243 243 -b 10 -N 20  ',
+        '--length 125 125 125 -b 10 -N 20  ',
+        '--length 100 100 100 -t 2 -o -b 10 -N 20  ',
+        '--length 100 100 100 -t 3 -o -b 10 -N 20  ',
+        '--length 200 200 200 -t 2 -o -b 10 -N 20  ',
+        '--length 200 200 200 -t 3 -o -b 10 -N 20  ',
+        '--length 192 192 192 -t 2 -o -b 10 -N 20  ',
+        '--length 192 192 192 -t 3 -o -b 10 -N 20  ',
+        '--length 64 64 64 -t 2 -o -b 10 -N 20  ',
+        '--length 60  -b 1024 -N 20  ',
+        '--length 64 64 64 -t 2 -o  ',
+        '--length 216 216 216 -t 2 -o  ',
+        '--length 36 336 56 --double  -o  ',
+        '--length 10000 -b 10000 --double  -o  ',
+        '--length 336 336 56 --double -o  '
+        ]
+
+Rocthrust:
+        rocthrust: 1
+
+HipPerf:
+        hipPerfDevMemWriteSpeed: 1
+        hipPerfDispatchSpeed: 1
+        hipPerfDotProduct : 1
+        hipPerfMandelbrot : 1
+        hipPerfMemcpy : 1
+        hipPerfMemMallocCpyFree : 1
+        hipPerfModuleLoad : 1
+        hipPerfSampleRate : 1
+        hipPerfSharedMemReadSpeed : 1
+        hipPerfStreamConcurrency : 1
+        hipPerfStreamCreateCopyDestroy : 1
+        hipPerfBufferCopyRectSpeed : 1
+        hipPerfBufferCopySpeed : 1
+        hipPerfDeviceConcurrency : 1
+        hipPerfDevMemReadSpeed : 1
+        hipPerfMemset : 1
+        hipPerfMemFill : 1
+
+HipRT:
+        hiprt: --width=512 --height=512 --referencePath=..\test\references\ --gtest_filter=PerformanceTest*
+
+HipCub:
+        benchmark_block_adjacent_difference: 1
+        benchmark_block_discontinuity: 1
+        benchmark_block_exchange: 1
+        benchmark_block_histogram: 1
+        benchmark_block_merge_sort: 1
+        benchmark_block_radix_sort: 1
+        benchmark_block_reduce: 1
+        benchmark_block_run_length_decode: 1
+        benchmark_block_scan: 1
+        benchmark_device_adjacent_difference: 1
+        benchmark_device_histogram: 1
+        benchmark_device_merge_sort: 1
+        benchmark_device_partition: 1
+        benchmark_device_radix_sort: 1
+        benchmark_device_reduce: 1
+        benchmark_device_reduce_by_key: 1
+        benchmark_device_run_length_encode: 1
+        benchmark_device_scan: 1
+        benchmark_device_segmented_radix_sort: 1
+        benchmark_device_segmented_reduce: 1
+        benchmark_device_segmented_sort: 1
+        benchmark_device_select: 1
+        benchmark_device_spmv: 1
+        benchmark_warp_exchange: 1
+        benchmark_warp_load: 1
+        benchmark_warp_merge_sort: 1
+        benchmark_warp_reduce: 1
+        benchmark_warp_scan: 1
+        benchmark_warp_store: 1
+
+RocPrim:
+        benchmark_block_adjacent_difference: 1
+        benchmark_block_discontinuity: 1
+        benchmark_block_exchange: 1
+        benchmark_block_histogram: 1
+        benchmark_block_radix_rank: 1
+        benchmark_block_radix_sort: 1
+        benchmark_block_reduce: 1
+        benchmark_block_scan: 1
+        benchmark_block_sort: 1
+        benchmark_config_dispatch: 1
+        benchmark_device_adjacent_difference: 1
+        benchmark_device_binary_search: 1
+        benchmark_device_histogram: 1
+        benchmark_device_memory: 1
+        benchmark_device_merge: 1
+        benchmark_device_merge_sort: 1
+        benchmark_device_merge_sort_block_merge: 1
+        benchmark_device_merge_sort_block_sort: 1
+        benchmark_device_partition: 1
+        benchmark_device_radix_sort: 1
+        benchmark_device_radix_sort_block_sort: 1
+        benchmark_device_radix_sort_onesweep: 1
+        benchmark_device_reduce: 1
+        benchmark_device_reduce_by_key: 1
+        benchmark_device_run_length_encode: 1
+        benchmark_device_scan: 1
+        benchmark_device_segmented_radix_sort: 1
+        benchmark_device_segmented_reduce: 1
+        benchmark_device_select: 1
+        benchmark_device_transform: 1
+        benchmark_warp_exchange: 1
+        benchmark_warp_reduce: 1
+        benchmark_warp_scan: 1
+        benchmark_warp_sort: 1
+
+
+
+...

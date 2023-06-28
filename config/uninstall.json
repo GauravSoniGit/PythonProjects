@@ -1,0 +1,16 @@
+{
+  "uninstall":
+  {
+    "HIP SDK Core": "name = 'HIP SDK Core'",
+    "HIP SDK Libraries Runtime": "name = 'HIP SDK Libraries Runtime'",
+    "HIP SDK Libraries Development": "name = 'HIP SDK Libraries Development'",
+    "HIP SDK Runtime Compiler Runtime": "name = 'HIP SDK Runtime Compiler Runtime'",
+    "HIP SDK Runtime Compiler Development": "name = 'HIP SDK Runtime Compiler Development'",
+    "HIP SDK Profiler": "name = 'HIP SDK Profiler'",
+    "HIP SDK Ray Tracing Runtime": "name = 'HIP SDK Ray Tracing Runtime'",
+    "HIP SDK Ray Tracing Development": "name = 'HIP SDK Ray Tracing Development'",
+    "HIP SDK Visual Studio 2017 Plugin": "name = 'HIP SDK Visual Studio 2017 Plugin'",
+    "HIP SDK Visual Studio 2019 Plugin": "name = 'HIP SDK Visual Studio 2019 Plugin'",
+    "HIP SDK Visual Studio 2022 Plugin": "name = 'HIP SDK Visual Studio 2022 Plugin'"
+  }
+}
